@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<candys xmlns="http://www.example.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.com Candys.xsd" xmlns:tns="http://www.example.com/candy">
+
+	<candy>
+		<tns:name>Kuznechik</tns:name>
+		<tns:caloric-value>1000</tns:caloric-value>
+		<tns:type>CHOCOLATE</tns:type>
+		<tns:ingredients water="0.5%" sugar="200" fructose="300"
+			choco-type="MILK" vanillin="20" />
+		<tns:nutritional-value>
+			<tns:proteins>99.9</tns:proteins>
+			<tns:fats>99.9</tns:fats>
+			<tns:carbohydrates>99.9</tns:carbohydrates>
+		</tns:nutritional-value>
+		<tns:venture-manufacturer>Spartak</tns:venture-manufacturer>
+	</candy>
+
+	<candy>
+		<tns:name>Mishki v lesy</tns:name>
+		<tns:caloric-value>2000</tns:caloric-value>
+		<tns:type>CHOCOLATE</tns:type>
+		<tns:ingredients water="5.0%" sugar="200" fructose="300"
+			choco-type="DARK" vanillin="20" />
+		<tns:nutritional-value>
+			<tns:proteins>10.4</tns:proteins>
+			<tns:fats>99.9</tns:fats>
+			<tns:carbohydrates>0</tns:carbohydrates>
+		</tns:nutritional-value>
+		<tns:venture-manufacturer>Slodych</tns:venture-manufacturer>
+	</candy>
+
+	<candy>
+		<tns:name>Krabovie</tns:name>
+		<tns:caloric-value>1000</tns:caloric-value>
+		<tns:type>CARAMEL</tns:type>
+		<tns:ingredients water="0.5%" sugar="200" fructose="300"
+			vanillin="20" />
+		<tns:nutritional-value>
+			<tns:proteins>10.4</tns:proteins>
+			<tns:fats>9.9</tns:fats>
+			<tns:carbohydrates>91.9</tns:carbohydrates>
+		</tns:nutritional-value>
+		<tns:venture-manufacturer>70-let Kamynarka</tns:venture-manufacturer>
+	</candy>
+</candys>

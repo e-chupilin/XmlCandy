@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:candys xmlns="http://www.example.com/candy" xmlns:ns2="http://www.example.com">
+	<ns2:candy>
+		<name>Kuznechik</name>
+		<caloric-value>1000</caloric-value>
+		<type>CHOCOLATE</type>
+		<ingredients water="0.5%" sugar="200" fructose="300"
+			choco-type="MILK" vanillin="20" />
+		<nutritional-value>
+			<proteins>99.9</proteins>
+			<fats>99.9</fats>
+			<carbohydrates>99.9</carbohydrates>
+		</nutritional-value>
+		<venture-manufacturer>Spartak</venture-manufacturer>
+	</ns2:candy>
+	<ns2:candy>
+		<name>Mishki v lesy</name>
+		<caloric-value>2000</caloric-value>
+		<type>CHOCOLATE</type>
+		<ingredients water="5.0%" sugar="200" fructose="300"
+			choco-type="DARK" vanillin="20" />
+		<nutritional-value>
+			<proteins>10.4</proteins>
+			<fats>99.9</fats>
+			<carbohydrates>0</carbohydrates>
+		</nutritional-value>
+		<venture-manufacturer>Slodych</venture-manufacturer>
+	</ns2:candy>
+	<ns2:candy>
+		<name>Krabovie</name>
+		<caloric-value>1000</caloric-value>
+		<type>CARAMEL</type>
+		<ingredients water="0.5%" sugar="200" fructose="300"
+			vanillin="20" />
+		<nutritional-value>
+			<proteins>10.4</proteins>
+			<fats>9.9</fats>
+			<carbohydrates>91.9</carbohydrates>
+		</nutritional-value>
+		<venture-manufacturer>70-let Kamynarka</venture-manufacturer>
+	</ns2:candy>
+</ns2:candys>

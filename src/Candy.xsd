@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.com/candy" xmlns:tns="http://www.example.com/candy"
+	elementFormDefault="qualified" xmlns:ins="http://www.example.com/ingredient">
+
+	<xs:import namespace="http://www.example.com/ingredient"
+		schemaLocation="Ingredient.xsd" />
+
+	<xs:simpleType name="nutritionalType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9][0-9].[0-9])|(0)|(100)|([0-9].[0-9])" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="candyType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="caloric-value">
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0" />
+						<xs:maxInclusive value="10000" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="type">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="CHOCOLATE"></xs:enumeration>
+						<xs:enumeration value="IRIS"></xs:enumeration>
+						<xs:enumeration value="CARAMEL"></xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ingredients" type="ins:ingredientType" />
+			<xs:element name="nutritional-value">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="proteins" type="tns:nutritionalType" />
+						<xs:element name="fats" type="tns:nutritionalType" />
+						<xs:element name="carbohydrates" type="tns:nutritionalType" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="venture-manufacturer">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([1-9]|[A-Z]).*" />
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

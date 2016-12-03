@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.com/ingredient" xmlns:tns="http://www.example.com/ingredient"
+	elementFormDefault="qualified">
+
+	<xs:simpleType name="ingredientValueType">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0" />
+			<xs:maxInclusive value="1000" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ingredientValueWaterType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(([0-9][0-9].[0-9])|(0)|(100)|([0-9].[0-9]))%" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="ingredientType">
+		<xs:attribute name="water" type="tns:ingredientValueWaterType" />
+		<xs:attribute name="sugar" type="tns:ingredientValueType" />
+		<xs:attribute name="fructose" type="tns:ingredientValueType" />
+		<xs:attribute name="choco-type" use="optional">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="MILK"></xs:enumeration>
+					<xs:enumeration value="DARK"></xs:enumeration>
+					<xs:enumeration value="WHITE"></xs:enumeration>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="vanillin" type="tns:ingredientValueType" />
+	</xs:complexType>
+
+
+</xs:schema>
